@@ -1,4 +1,11 @@
 terraform {
+  backend "remote" {
+    organization = "BrokeYourBike"
+    workspaces {
+      name = "Learn-Workspace"
+    }
+  }
+
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -19,6 +26,6 @@ resource "aws_instance" "app_server" {
   instance_type = "t3.nano"
 
   tags = {
-    Name = "ExampleAppServerInstance"
+    Name = var.instance_name
   }
 }
