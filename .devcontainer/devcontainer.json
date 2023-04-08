@@ -1,0 +1,15 @@
+{
+	"name": "what.tf",
+	"image": "mcr.microsoft.com/devcontainers/base",
+	"features": {
+		"ghcr.io/devcontainers/features/terraform:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"4ops.terraform",
+				"GitHub.copilot"
+			]
+		}
+	}
+}
